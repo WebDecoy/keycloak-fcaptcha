@@ -20,3 +20,4 @@ jobs:
           cache: maven
       - run: mvn --batch-mode --no-transfer-progress clean verify
       - run: docker build --tag keycloak-fcaptcha:test .
+      - run: bash scripts/runtime-smoke.sh
