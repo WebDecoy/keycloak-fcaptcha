@@ -12,7 +12,7 @@ A Keycloak Authenticator SPI that adds self-hosted [FCaptcha](https://github.com
 
 ```bash
 mvn clean verify
-cp target/keycloak-fcaptcha-0.1.0-SNAPSHOT.jar /opt/keycloak/providers/
+cp target/keycloak-fcaptcha-0.1.0.jar /opt/keycloak/providers/
 /opt/keycloak/bin/kc.sh build
 ```
 
@@ -31,11 +31,13 @@ Add the FCaptcha instance origin to the realm's Content Security Policy `script-
 
 ```dockerfile
 FROM quay.io/keycloak/keycloak:26.3.3
-COPY target/keycloak-fcaptcha-0.1.0-SNAPSHOT.jar /opt/keycloak/providers/
+COPY target/keycloak-fcaptcha-0.1.0.jar /opt/keycloak/providers/
 RUN /opt/keycloak/bin/kc.sh build
 ```
+
+Prebuilt JARs and container images are published with each GitHub release.
+
 
 ## License
 
 MIT
-

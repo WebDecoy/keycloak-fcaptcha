@@ -6,6 +6,5 @@ COPY src ./src
 RUN mvn --batch-mode --no-transfer-progress clean package
 
 FROM quay.io/keycloak/keycloak:26.3.3
-COPY --from=build /workspace/target/keycloak-fcaptcha-0.1.0-SNAPSHOT.jar /opt/keycloak/providers/keycloak-fcaptcha.jar
+COPY --from=build /workspace/target/keycloak-fcaptcha-0.1.0.jar /opt/keycloak/providers/keycloak-fcaptcha.jar
 RUN /opt/keycloak/bin/kc.sh build
-

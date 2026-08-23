@@ -6,7 +6,7 @@
 
   <groupId>com.webdecoy.keycloak</groupId>
   <artifactId>keycloak-fcaptcha</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.1.0</version>
   <packaging>jar</packaging>
   <name>Keycloak FCaptcha Provider</name>
 
@@ -59,4 +59,3 @@
     </plugins>
   </build>
 </project>
-
